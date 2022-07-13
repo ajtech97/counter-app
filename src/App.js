@@ -8,8 +8,8 @@ const App = () => {
         <input type='text' class ="counter-text" placeholder='Enter name for your counter' />
         <div class ="counter-count">{0}</div>
         <div class ="button-container">
-          <button class ="button button-subtract">-</button>
-          <button class ="button button-add">+</button>
+          <button class ="button-subtract">-</button>
+          <button class ="button-add">+</button>
         </div>
     </main>
   );

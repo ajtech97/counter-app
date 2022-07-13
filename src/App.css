@@ -60,7 +60,7 @@ h1{
 }
 
 
-.button{
+button{
     font-size: 50px;
     border: solid white 1px;
     cursor: pointer;
