@@ -1,18 +1,17 @@
-import React from 'react';
 import './App.css';
 
 const App = () => {
 
   return(
-    <div class ="main">
-        <div class ="title">Counter App</div>
-        <input type='text' placeholder='Enter name for your app' class ="cnt-text" />
-        <div class ="cnt">{0}</div>
-        <div class ="btn-container">
-          <button class ="btn cnt-left">-</button>
-          <button class ="btn cnt-right">+</button>
+    <main>
+        <h1>Counter App</h1>
+        <input type='text' class ="counter-text" placeholder='Enter name for your counter' />
+        <div class ="counter-count">{0}</div>
+        <div class ="button-container">
+          <button class ="button button-subtract">-</button>
+          <button class ="button button-add">+</button>
         </div>
-    </div>
+    </main>
   );
 }
 
