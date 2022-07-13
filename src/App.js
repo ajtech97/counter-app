@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+
+  return(
+    <main>
+        <h1>Counter App</h1>
+        <input type='text' class ="counter-text" placeholder='Enter name for your counter' />
+        <div class ="counter-count">{0}</div>
+        <div class ="button-container">
+          <button class ="button-subtract">-</button>
+          <button class ="button-add">+</button>
+        </div>
+    </main>
   );
 }
 
