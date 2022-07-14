@@ -32,6 +32,9 @@ h1{
     border-bottom: solid;
 }
 
+.counter-text::placeholder{
+    font-size: 25px;
+}
 .counter-text:hover{
     border-bottom: 5px solid;
 }
@@ -61,8 +64,7 @@ button{
     cursor: pointer;
     background-color: #263200;
     color: #BEFF00;
-    display: flex;
-    flex: 2;
+    flex: 1;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -73,4 +75,6 @@ button:hover{
     opacity: .5;
     color: white;
 }
+
+
 
