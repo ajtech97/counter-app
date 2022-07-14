@@ -12,7 +12,7 @@ const App = () => {
   }
 
   const handleCountSubtract = () => {
-    setCount((prevCount) => prevCount - 1)
+    setCount(prevCount => prevCount - 1)
   }
 
   const handleCounterTextChange = (event) => {
