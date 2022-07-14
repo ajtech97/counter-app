@@ -5,7 +5,7 @@ import './App.css';
 const App = () => {
 
   const [count, setCount] = useState(0);
-  const [countertext, setCountertext] = useState('');
+  const [counterText, setCounterText] = useState('');
 
   const addCounter = () => {
     setCount(prevCount =>  prevCount  + 1)
@@ -13,6 +13,10 @@ const App = () => {
 
   const subtractCounter = () => {
     setCount((prevCount) => prevCount - 1)
+  }
+
+  const SetCountText = (event) => {
+    setCounterText(event.target.value)
   }
 
 
@@ -23,8 +27,8 @@ const App = () => {
           type='text' 
           class ="counter-text" 
           placeholder='Enter name for your counter' 
-          value={countertext} 
-          onChange={event => setCountertext(event.target.value)} 
+          value={counterText} 
+          onChange={event => SetCountText(event)} 
           />
         <div class ="counter-count">
           {count}
