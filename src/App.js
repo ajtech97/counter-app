@@ -7,11 +7,11 @@ const App = () => {
   const [count, setCount] = useState(0);
   const [counterText, setCounterText] = useState('');
 
-  const addCounter = () => {
+  const handleCountAddition = () => {
     setCount(prevCount =>  prevCount  + 1)
   }
 
-  const subtractCounter = () => {
+  const handleCountSubtract = () => {
     setCount((prevCount) => prevCount - 1)
   }
 
@@ -36,12 +36,12 @@ const App = () => {
         <div class ="button-container">
           <button 
             class ="button-subtract" 
-            onClick={subtractCounter}>
+            onClick={handleCountSubtract}>
             -
           </button>
           <button 
             class ="button-add" 
-            onClick={addCounter}>
+            onClick={handleCountAddition}>
             +
             </button>
         </div>
