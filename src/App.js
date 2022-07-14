@@ -15,7 +15,7 @@ const App = () => {
     setCount((prevCount) => prevCount - 1)
   }
 
-  const SetCountText = (event) => {
+  const handleCounterTextChange = (event) => {
     setCounterText(event.target.value)
   }
 
@@ -28,7 +28,7 @@ const App = () => {
           class ="counter-text" 
           placeholder='Enter name for your counter' 
           value={counterText} 
-          onChange={event => SetCountText(event)} 
+          onChange={handleCounterTextChange} 
           />
         <div class ="counter-count">
           {count}
