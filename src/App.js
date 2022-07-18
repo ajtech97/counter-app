@@ -24,24 +24,9 @@ const App = () => {
 		setLocalData(COUNTER, { count, counterText });
 	};
 
-	const changeCountValue = () => {
-		const data = getLocalData(COUNTER);
-		const invalue = JSON.parse(data).count;
-		return invalue;
-	};
-
-	const changeCountTextValue = () => {
-		const data = getLocalData(COUNTER);
-		const invalue = JSON.parse(data).counterText;
-		return invalue;
-	};
-
 	useEffect(() => {
-		setCount(changeCountValue);
-	}, []);
-
-	useEffect(() => {
-		setCounterText(changeCountTextValue);
+		setCount(JSON.parse(getLocalData(COUNTER)).count);
+		setCounterText(JSON.parse(getLocalData(COUNTER)).counterText);
 	}, []);
 
 	return (
