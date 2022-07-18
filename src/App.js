@@ -25,8 +25,8 @@ const App = () => {
 	};
 
 	useEffect(() => {
-		setCount(JSON.parse(getLocalData(COUNTER)).count);
-		setCounterText(JSON.parse(getLocalData(COUNTER)).counterText);
+		setCount(getLocalData(COUNTER).count || 0);
+		setCounterText(getLocalData(COUNTER).counterText || "");
 	}, []);
 
 	return (
