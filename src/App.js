@@ -26,7 +26,7 @@ const App = () => {
 
 	useEffect(() => {
 		setCount(getLocalData(COUNTER).count || 0);
-		setCounterText(getLocalData(COUNTER).counterText || "");
+		setCounterText(getLocalData(COUNTER).counterText);
 	}, []);
 
 	return (
