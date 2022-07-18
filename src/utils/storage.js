@@ -1,6 +1,6 @@
 export const COUNTER = "count";
 
-export const setLocalStorage = (key, value) =>
+export const setLocalData = (key, value) =>
 	localStorage.setItem(key, JSON.stringify(value));
 
-export const getLocalStorage = key => localStorage.getItem(key);
+export const getLocalData = key => localStorage.getItem(key);

@@ -1,18 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
-import { COUNTER, setLocalStorage, getLocalStorage } from "./utils/storage.js";
+import { COUNTER, setLocalData, getLocalData } from "./utils/storage.js";
 
 const App = () => {
-	const [count, setCount] = useState(() => {
-		const data = getLocalStorage(COUNTER);
-		return JSON.parse(data).count || 0;
-	});
+	const [count, setCount] = useState(0);
 
-	const [counterText, setCounterText] = useState(() => {
-		const data = getLocalStorage(COUNTER);
-		return JSON.parse(data).counterText || 0;
-	});
+	const [counterText, setCounterText] = useState("");
 
 	const handleCountAddition = () => {
 		setCount(prevCount => prevCount + 1);
@@ -27,8 +21,28 @@ const App = () => {
 	};
 
 	const handleClickOnSave = () => {
-		setLocalStorage(COUNTER, { count, counterText });
+		setLocalData(COUNTER, { count, counterText });
 	};
+
+	const changeCountValue = () => {
+		const data = getLocalData(COUNTER);
+		const invalue = JSON.parse(data).count;
+		return invalue;
+	};
+
+	const changeCountTextValue = () => {
+		const data = getLocalData(COUNTER);
+		const invalue = JSON.parse(data).counterText;
+		return invalue;
+	};
+
+	useEffect(() => {
+		setCount(changeCountValue);
+	}, []);
+
+	useEffect(() => {
+		setCounterText(changeCountTextValue);
+	}, []);
 
 	return (
 		<main>
