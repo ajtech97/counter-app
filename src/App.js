@@ -6,7 +6,6 @@ import { COUNTER, setLocalData, getLocalData } from "./utils/storage.js";
 const App = () => {
 	const [count, setCount] = useState(0);
 	const [counterText, setCounterText] = useState("");
-	const [isDisabled, setDisabled] = useState(false);
 
 	const handleCountAddition = () => {
 		setCount(prevCount => prevCount + 1);
@@ -14,10 +13,10 @@ const App = () => {
 
 	const handleCountSubtract = () => {
 		if (count === 1) {
-			setDisabled(prevState => (prevState = true));
+			document.getElementsByClassName("button-subtract").disabled = true;
 		}
 		if (count > 0) {
-			setDisabled(prevState => (prevState = false));
+			document.getElementsByClassName("button-subtract").disabled = false;
 			setCount(prevCount => prevCount - 1);
 		}
 	};
@@ -50,7 +49,7 @@ const App = () => {
 				<button
 					class="button-subtract"
 					onClick={handleCountSubtract}
-					disabled={isDisabled}
+					disabled={false}
 				>
 					-
 				</button>
