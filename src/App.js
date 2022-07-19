@@ -14,11 +14,9 @@ const App = () => {
 
 	const handleCountSubtract = () => {
 		if (count === 1) {
-			alert("hi");
 			setDisabled(prevState => (prevState = true));
 		}
 		if (count > 0) {
-			alert("bye");
 			setDisabled(prevState => (prevState = false));
 			setCount(prevCount => prevCount - 1);
 		}
