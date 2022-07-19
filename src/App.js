@@ -5,7 +5,6 @@ import { COUNTER, setLocalData, getLocalData } from "./utils/storage.js";
 
 const App = () => {
 	const [count, setCount] = useState(0);
-
 	const [counterText, setCounterText] = useState("");
 
 	const handleCountAddition = () => {
@@ -41,7 +40,11 @@ const App = () => {
 			/>
 			<div class="counter-count">{count}</div>
 			<div class="button-container">
-				<button class="button-subtract" onClick={handleCountSubtract}>
+				<button
+					class="button-subtract"
+					onClick={handleCountSubtract}
+					disabled={count === 0}
+				>
 					-
 				</button>
 				<button class="button-add" onClick={handleCountAddition}>
