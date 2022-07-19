@@ -5,15 +5,23 @@ import { COUNTER, setLocalData, getLocalData } from "./utils/storage.js";
 
 const App = () => {
 	const [count, setCount] = useState(0);
-
 	const [counterText, setCounterText] = useState("");
+	const [isDisabled, setDisabled] = useState(false);
 
 	const handleCountAddition = () => {
 		setCount(prevCount => prevCount + 1);
 	};
 
 	const handleCountSubtract = () => {
-		setCount(prevCount => prevCount - 1);
+		if (count === 1) {
+			alert("hi");
+			setDisabled(prevState => (prevState = true));
+		}
+		if (count > 0) {
+			alert("bye");
+			setDisabled(prevState => (prevState = false));
+			setCount(prevCount => prevCount - 1);
+		}
 	};
 
 	const handleCounterTextChange = event => {
@@ -41,7 +49,11 @@ const App = () => {
 			/>
 			<div class="counter-count">{count}</div>
 			<div class="button-container">
-				<button class="button-subtract" onClick={handleCountSubtract}>
+				<button
+					class="button-subtract"
+					onClick={handleCountSubtract}
+					disabled={isDisabled}
+				>
 					-
 				</button>
 				<button class="button-add" onClick={handleCountAddition}>
