@@ -12,11 +12,7 @@ const App = () => {
 	};
 
 	const handleCountSubtract = () => {
-		if (count === 1) {
-			document.getElementsByClassName("button-subtract").disabled = true;
-		}
 		if (count > 0) {
-			document.getElementsByClassName("button-subtract").disabled = false;
 			setCount(prevCount => prevCount - 1);
 		}
 	};
@@ -49,7 +45,7 @@ const App = () => {
 				<button
 					class="button-subtract"
 					onClick={handleCountSubtract}
-					disabled={false}
+					disabled={count === 0 ? true : false}
 				>
 					-
 				</button>
