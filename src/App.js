@@ -12,9 +12,7 @@ const App = () => {
 	};
 
 	const handleCountSubtract = () => {
-		if (count > 0) {
-			setCount(prevCount => prevCount - 1);
-		}
+		setCount(prevCount => prevCount - 1);
 	};
 
 	const handleCounterTextChange = event => {
@@ -45,7 +43,7 @@ const App = () => {
 				<button
 					class="button-subtract"
 					onClick={handleCountSubtract}
-					disabled={count === 0 ? true : false}
+					disabled={count === 0}
 				>
 					-
 				</button>

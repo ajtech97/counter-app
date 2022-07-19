@@ -69,3 +69,8 @@ button:hover {
 	opacity: 0.5;
 	color: white;
 }
+
+.button-subtract:disabled {
+	background-color: darkolivegreen;
+	opacity: 1;
+}
