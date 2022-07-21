@@ -1,0 +1,90 @@
+main {
+	margin-top: -27px;
+	padding: 0px;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 600;
+	color: #263200;
+	text-align: center;
+}
+
+.main-container {
+	display: flex;
+	align-items: center;
+	border: solid #263200 1px;
+	justify-content: space-between;
+	background-color: #beff00;
+	flex-wrap: wrap;
+	box-shadow: 0px 0px 5px #263200;
+}
+
+.counter-text {
+	font-size: 30px;
+	text-align: center;
+	border: none;
+	background-color: #beff00;
+	color: #263200;
+	border-radius: 100px;
+	outline: none;
+	border-bottom: solid;
+	flex: 4;
+	padding-top: 10px;
+}
+
+.counter-text::placeholder {
+	font-size: 25px;
+}
+.counter-text:hover {
+	border-bottom: 5px solid;
+}
+
+.counter-count {
+	font-size: 60px;
+	color: #263200;
+	text-align: center;
+}
+
+.inner-container {
+	flex: 1;
+	text-align: center;
+}
+
+.button {
+	font-size: 50px;
+	border: solid white 1px;
+	cursor: pointer;
+	background-color: #263200;
+	color: #beff00;
+	height: 120px;
+	width: 120px;
+	border-radius: 100px;
+}
+
+button:hover {
+	opacity: 0.5;
+}
+
+.button-subtract:disabled {
+	background-color: darkolivegreen;
+	opacity: 1;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+.button-new {
+	height: 60px;
+	width: 200px;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: 600;
+	background-color: #263200;
+	color: #beff00;
+	border: 0px;
+	cursor: pointer;
+}
