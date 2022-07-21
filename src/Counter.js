@@ -59,12 +59,6 @@ const Counter = () => {
 						</button>
 					</div>
 				</div>
-
-				<div class="button-container">
-					<button class="button-new" onClick={handleClickOnSave}>
-						Add Counter
-					</button>
-				</div>
 			</main>
 		</>
 	);
