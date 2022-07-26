@@ -1,60 +1,13 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import "./App.css";
-import { COUNTER, setLocalData, getLocalData } from "./utils/storage.js";
+import Counter from "./Counter";
 
 const App = () => {
-	const [count, setCount] = useState(0);
-	const [counterText, setCounterText] = useState("");
-
-	const handleCountAddition = () => {
-		setCount(prevCount => prevCount + 1);
-	};
-
-	const handleCountSubtract = () => {
-		setCount(prevCount => prevCount - 1);
-	};
-
-	const handleCounterTextChange = event => {
-		setCounterText(event.target.value);
-	};
-
-	const handleClickOnSave = () => {
-		setLocalData(COUNTER, { count, counterText });
-	};
-
-	useEffect(() => {
-		setCount(getLocalData(COUNTER).count || 0);
-		setCounterText(getLocalData(COUNTER).counterText || "");
-	}, []);
-
 	return (
 		<main>
-			<h1>Counter App</h1>
-			<input
-				type="text"
-				class="counter-text"
-				placeholder="Enter name for your counter"
-				value={counterText}
-				onChange={handleCounterTextChange}
-			/>
-			<div class="counter-count">{count}</div>
+			<Counter />
 			<div class="button-container">
-				<button
-					class="button-subtract"
-					onClick={handleCountSubtract}
-					disabled={count === 0}
-				>
-					-
-				</button>
-				<button class="button-add" onClick={handleCountAddition}>
-					+
-				</button>
-			</div>
-			<div class="button-container">
-				<button class="button-save" onClick={handleClickOnSave}>
-					Save
-				</button>
+				<button class="button-new">Add Counter</button>
 			</div>
 		</main>
 	);

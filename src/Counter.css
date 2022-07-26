@@ -1,0 +1,105 @@
+main {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+}
+
+.main-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	box-shadow: 0px 0px 5px #263200;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.counter-text {
+	font-size: 30px;
+	text-align: center;
+	border: none;
+	background-color: white;
+	color: #263200;
+	outline: none;
+	border-bottom: solid;
+	flex: 4;
+}
+
+.counter-text::placeholder {
+	font-size: 22px;
+}
+.counter-text:hover {
+	border-bottom: 5px solid;
+}
+
+.counter-count {
+	font-size: 50px;
+	color: #263200;
+	text-align: center;
+}
+
+.inner-container {
+	flex: 1;
+	text-align: center;
+}
+
+.button {
+	font-size: 50px;
+	border: solid white 1px;
+	cursor: pointer;
+	background-color: #ff1371;
+	color: white;
+	height: 70px;
+	width: 70px;
+	border-radius: 100px;
+	margin: 10px;
+}
+
+button:hover {
+	opacity: 0.5;
+}
+
+.button-subtract:disabled {
+	background-color: #a73d67;
+	opacity: 1;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 30px;
+	}
+	.counter-text {
+		font-size: 20px;
+	}
+	.counter-text::placeholder {
+		font-size: 18px;
+	}
+	.counter-count {
+		font-size: 40px;
+	}
+	.inner-container {
+		padding: 5px;
+	}
+	.button {
+		font-size: 30px;
+		height: 50px;
+		width: 50px;
+		margin: 2px;
+	}
+}
